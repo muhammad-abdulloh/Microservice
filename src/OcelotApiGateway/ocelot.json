@@ -1,0 +1,37 @@
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/Users",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 80
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/users",
+//      "UpstreamHttpMethod": [ "Get" ]
+//    }
+//  ]
+//}
+
+{
+  "Routes": [
+    // drugService API
+    {
+      "DownstreamPathTemplate": "/api/Users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5050"
+  }
+}

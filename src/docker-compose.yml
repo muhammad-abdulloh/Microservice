@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Catalog.API/Dockerfile
+
+  backet.api:
+    image: ${DOCKER_REGISTRY-}backetapi
+    build:
+      context: .
+      dockerfile: Backet.API/Dockerfile
+
+
+  auth.api:
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: .
+      dockerfile: Auth.API/Dockerfile
+
+
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: OcelotApiGateway/Dockerfile
+
