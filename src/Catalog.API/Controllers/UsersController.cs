@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.API.Controllers
 {
@@ -10,7 +9,6 @@ namespace Catalog.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-
             var result = new[]
             {
                 new {Name = "Muhammad Abdulloh", Familya = "Komilov"},
